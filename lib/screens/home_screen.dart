@@ -1,6 +1,6 @@
+import 'package:elvar/constants/fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,8 +12,7 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: Theme.of(context).primaryColorDark,
           title: Text(
             'Elvar Bank',
-            style: GoogleFonts.instrumentSans()
-                .copyWith(fontWeight: FontWeight.bold, fontSize: 22),
+            style: font,
           ),
           centerTitle: true,
           actions: [
@@ -41,8 +40,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Text(
                     'Elvar Bank',
-                    style: GoogleFonts.instrumentSans()
-                        .copyWith(fontWeight: FontWeight.bold, fontSize: 20),
+                    style: font,
                   ),
                   const FaIcon(FontAwesomeIcons.nfcSymbol)
                 ],
@@ -53,8 +51,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text(
                         '4098 5834 4121 7412',
-                        style: GoogleFonts.instrumentSans().copyWith(
-                            fontWeight: FontWeight.bold, fontSize: 20),
+                        style: font,
                       ),
                       IconButton(
                         style: const ButtonStyle(
@@ -69,12 +66,25 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text(
                         '07/26',
-                        style: GoogleFonts.instrumentSans().copyWith(
-                            fontWeight: FontWeight.bold, fontSize: 20),
+                        style: font,
                       ),
-                      Text('CVV',
-                          style: GoogleFonts.instrumentSans().copyWith(
-                              fontWeight: FontWeight.bold, fontSize: 20))
+                      Padding(
+                        padding: const EdgeInsets.only(left: 186.0),
+                        child: Text(
+                          'CVV',
+                          style: font,
+                        ),
+                      ),
+                      IconButton(
+                          style: const ButtonStyle(
+                              iconSize: MaterialStatePropertyAll(23),
+                              iconColor:
+                                  MaterialStatePropertyAll(Colors.black)),
+                          onPressed: () {},
+                          icon: const Padding(
+                            padding: EdgeInsets.only(right: 7, top: 2),
+                            child: FaIcon(FontAwesomeIcons.eye),
+                          ))
                     ],
                   ),
                 ],
@@ -83,8 +93,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Text(
                     'Mr.Mirali Shamaxi',
-                    style: GoogleFonts.instrumentSans()
-                        .copyWith(fontWeight: FontWeight.bold, fontSize: 20),
+                    style: font,
                   )
                 ],
               )
